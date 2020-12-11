@@ -6,19 +6,19 @@ function input() {
     echo $str1 $str2
 }
 
-# input
-# if [ $str1 \> $str2 ]; then
-#     echo "The Bigger String is $str1"
-# elif [ $str1 \< $str2 ]; then
-#     echo "The Bigger String is $str2"
-# else
-#     echo "The are equal"
-# fi
+input
+if [ $str1 \> $str2 ]; then
+    echo "The Bigger String is $str1"
+elif [ $str1 \< $str2 ]; then
+    echo "The Bigger String is $str2"
+else
+    echo "The are equal"
+fi
 
-# read -p "Enter -> " str
-# echo ${str^}  #Capitalize
-# echo ${str^^} #Uppercase
-# echo ${str^l} #Lowercase
+read -p "Enter -> " str
+echo ${str^}  #Capitalize
+echo ${str^^} #Uppercase
+echo ${str^l} #Lowercase
 
 # Variable Names should Be same otherwise Arguments wont be passed
 concatenation() {
