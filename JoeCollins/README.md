@@ -30,6 +30,7 @@ $1 = --help
 A special shell variable called $@ represents all of the args in a numerical order . THis can be used by a script to loop
 through several arguments that contain info like file names.
 
+## Exit Code
 Every time we run a command it returns an exit code, if it's 0 okay else WE GOT A PROBLEM BUDDY!!.
 
 ```
