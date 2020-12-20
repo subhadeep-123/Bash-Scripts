@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Regular Expressions
+
+
+read -p "Validate a Date: " date
+
+pat="^[0-9]{8}$"
+
+if [[$date =~ $pat ]]; then
+	echo "$date is valid"
+else
+	echo "$date is not valid"
+fi
+
+
+
+
+
+
+read -p "Enter two Number to sum" num1 num2
+sum=$((num1+num2))
+
+echo "$num1 + $num2 = $sum"
+
+# s is for secret
+read -sp "Enter the secret code" secret
+
+if ["$secret" == "psswd"]; then
+	echo "Enter"
+else
+	echo "Wrong Password"
+fi  
+
+
+
+
+# Parameter Expansion
+
+OIFS="$IFS"
+IFS=","
+read -p "Enter 2 num to add seperated by a comma" a b
+a=$${a//[[:blank:]]/}
+b=$${b//[[:blank:]]/}
+sum=$((a+b))
+echo "$a + $b = $sum"
+IFS="$OIFS "
+
+---- Output------ val = 23,    45
+
+name="Derek"
+echo "${name}'s toy" # this is parameter expansion
+samp_str="The dog climbed the tree"
+echo "${samp_str//dog/cat}"
+
+echo "I am ${name:Derek}"  
+
+
+
+
+# Parameter Expansion with stings
+
+rand_str="A random String"
+echo "String Length : ${#rand_str}" # For string Length
+echo "${rand_str:2}" # For Slicing
+echo "${rand_str:2:7}" # Start : end in Slicing
+echo "${rand_str#*A }" # Everything that follows after a
+

@@ -1,0 +1,77 @@
+#!/bin/bash
+
+str1=""
+str2="sad"
+str3="Happy"
+
+if ["$str1"]; then
+	echo "str1 has no value
+fi
+
+if ["$str2" == "str3"]; then
+	echo "$str2 equals $str3"
+elif ["$str2" != "$str3"]; then
+	echo "$str2 is not equal to $str3"
+fi
+
+
+if ["$str2" > "$str3"]; then
+	echo "$str2 is greater than $str3"
+elif ["$str2" < "$str3"]; then
+	echo "$str2 is less than $str3"
+fi
+
+
+
+
+
+
+
+## Checks File
+
+file1="./test_file1"
+file2="./test_file2"
+
+if [-e "$file1"]; then
+	echo "$file1 exists" 
+
+	if [ -f "$file1"]; then
+		echo "It is a normal file"
+	fi
+
+	if [ -r "$file1"]; then
+		echo "It is redeable"
+	fi
+
+	if [ -w "$file1"]; then
+		echo "It is writable"
+	fi
+
+	if [ -x "$file1"]; then
+		echo "It is executable"
+	fi 
+
+	if [ -d "$file1"]; then
+		echo "It is a directory
+	fi
+
+	if [ -L "$file1"]; then
+		echo "It is a symbolic Link"
+	fi
+
+	if [ -p "$file1"]; then
+		echo "It is a named pipe"
+	fi
+
+	if [ -S "$file1"]; then
+		echo "It is Network Socket"
+	fi
+
+	if [ -G "$file1"]; then
+		echo "It is Owned by the group"
+	fi
+
+	if [ -O "$file1"]; then
+		echo "It is Owned by the User"
+	fi
+fi
