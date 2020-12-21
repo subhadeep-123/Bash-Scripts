@@ -16,27 +16,25 @@ for i in ${fav_nums[*]}; do
 	echo $i
 done
 
-
 # Outputting Indexes
 for i in ${fav_nums[@]}; do
 	echo $i
 done
-
 
 # Length of the array
 echo "Lenngth : ${#fav_nums[@]}"
 
 echo "Index 3 Lenngth : ${#fav_nums[3]}"
 
-sorted_nums=($(for i in "${fav_nums[@]}"; do
-	echo $i;
-done | sort
+sorted_nums=($(
+	for i in "${fav_nums[@]}"; do
+		echo $i
+	done | sort
 ))
 
 for i in ${sorted_nums[*]}; do
 	echo $i
 done
-
 
 # Delete an arrary elements
 unset 'Sorted_nums[1]'

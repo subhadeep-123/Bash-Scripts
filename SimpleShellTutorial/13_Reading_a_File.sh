@@ -4,5 +4,5 @@ echo "Enter a Filename - "
 read filename
 
 while read lines; do
-echo $lines
-done < $filename
+    echo $lines
+done <$filename
